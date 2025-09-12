@@ -1,10 +1,63 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Common Header Styles */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -18px;
+  color: #666;
+  font-weight: 300;
+}
+
 /* Global Styles */
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: white;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  
   background: linear-gradient(135deg, #000000 20%, #333333 50%, #666666 100%);
   background-attachment: fixed;
   background-size: cover;
@@ -135,14 +188,26 @@ body::after {
 
 /* Photo */
 .photo {
-  position: relative;
-  z-index: 10;
+  position: absolute; 
+  right: 120px;       
+  z-index: 20;        
 }
 
 .photo img {
-  width: 350px;
-  height: auto;
+  width: 450px;    
+  height: auto;       
   display: block;
   border-radius: 10px;
-  transform: translateY(-20px); /* Move profile picture up */
+}
+
+footer {
+  
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
 }
