@@ -1,7 +1,380 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: white;
-  background: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  background: linear-gradient(135deg, #000000 20%, #333333 50%, #666666 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
 }
 
+/* Background Pattern */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.05) 3px, transparent 3px),
+    linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.03) 30%, transparent 70%);
+  background-size: 60px 60px, 40px 40px, 80px 80px, 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Decorative Gray Pattern */
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 60%;
+  background: linear-gradient(45deg, 
+    rgba(150,150,150,0.15) 0%, 
+    rgba(120,120,120,0.1) 30%, 
+    rgba(100,100,100,0.05) 60%, 
+    transparent 100%);
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.02) 10px,
+      rgba(255,255,255,0.02) 20px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header Styles - Centered Navigation (Same as Home) */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 50px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 50px;
+}
+
+.logo img {
+  height: 55px;
+}
+
+/* Navigation - Centered */
+nav {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -25px;
+  color: #666;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* Page Content */
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Project Sections */
+.project-section {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.project-section:last-child {
+  margin-bottom: 40px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-align: left;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Ensure all cards are the same size */
+.project-item {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 400px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-image {
+  height: 200px; /* Fixed height */
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Project Placeholder (for when no image is available) */
+.project-placeholder {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+}
+
+/* Project Info */
+.project-info {
+  padding: 25px;
+  color: #333;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project-info h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+  color: #2c3e50;
+}
+
+.project-info p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Footer */
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  nav {
+    gap: 30px;
+  }
+  
+  nav a {
+    font-size: 18px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -18px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+  
+  .page-content {
+    padding: 30px 20px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 40px 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  nav {
+    gap: 25px;
+  }
+  
+  nav a {
+    font-size: 16px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -15px;
+    font-size: 14px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .page-content {
+    padding: 20px 15px;
+  }
+  
+  .project-info {
+    padding: 20px;
+  }
+  
+  .project-info h3 {
+    font-size: 20px;
+  }
+  
+  .project-info p {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .project-section {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 20px;
+    justify-content: center;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -10px;
+    font-size: 12px;
+  }
+  
+  .page-content {
+    padding: 15px 10px;
+  }
+  
+  .project-placeholder {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .project-item {
+    height: 350px;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+}
