@@ -1,7 +1,210 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Global Styles */
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: white;
-  background: #000;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #333333 25%,
+    #666666 45%,
+    rgba(255,255,255,0.8) 70%,
+    #ffffff 100%
+  );
+  background-attachment: fixed;
 }
 
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -18px;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Page Content */
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 30px;
+}
+
+.page-content p {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  nav {
+    gap: 30px;
+  }
+  
+  nav a {
+    font-size: 18px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -18px;
+  }
+  
+  .page-content {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 40px 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  nav {
+    gap: 25px;
+  }
+  
+  nav a {
+    font-size: 16px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -15px;
+    font-size: 14px;
+  }
+  
+  .page-content {
+    padding: 20px 30px;
+  }
+  
+  .page-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 20px;
+    justify-content: center;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -10px;
+    font-size: 12px;
+  }
+  
+  .page-content {
+    padding: 20px;
+  }
+  
+  .page-content h1 {
+    font-size: 28px;
+  }
+}

@@ -1,7 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: white;
-  background: #000;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #333333 50%,
+    #666666 75%,
+    rgba(187, 187, 187, 0.774) 90%,
+    #bdbdbd 100%
+  );
+  background-attachment: fixed;
 }
 
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -18px;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Active page indicator for About Me */
+nav a[href="about.html"]::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+}
+
+/* About Me Section with Gradient */
+.intro-section {
+  padding: 60px 80px 40px;
+  position: relative;
+  z-index: 10;
+  
+}
+
+.intro-box {
+  max-width: 800px;
+}
+
+.intro-box h1 {
+  font-size: 48px;
+  margin: 0 0 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.intro-box p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+/* Skills Section - White Background */
+.skills-section {
+  background: white;
+  padding: 80px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.skills-section-bg {
+  width: 100%;
+}
+
+/* Skills Grid - Fixed 3x2 Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-item {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 200px;
+}
+
+.skill-item:hover {
+  background: #f8f9fa;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.skill-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.skill-content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Tools Section */
+.tools-section {
+  background: white;
+  padding: 0 80px 80px;
+}
+
+.tools-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.tools-box {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.tools-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+.communication-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.tool-item, .communication-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.tool-item:hover, .communication-tool:hover {
+  background: #f8f9fa;
+}
+
+/* BIGGER TOOL ICONS */
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.tool-name {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background: white;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-section, .skills-section, .tools-section {
+    padding: 40px 20px;
+  }
+
+  .tools-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Skills Grid - 2x3 on tablet */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  nav a:not(:last-child)::after {
+    right: -12px;
+  }
+
+  .intro-box h1 {
+    font-size: 36px;
+  }
+
+  .intro-box p {
+    font-size: 16px;
+  }
+
+  .skill-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tool-icon img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 20px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -10px;
+    font-size: 12px;
+  }
+
+  .intro-section {
+    padding: 30px 15px;
+  }
+
+  .intro-box h1 {
+    font-size: 28px;
+  }
+
+  .skills-section, .tools-section {
+    padding: 30px 15px;
+  }
+
+  .tools-box {
+    padding: 25px;
+  }
+
+  .skill-item {
+    padding: 20px;
+  }
+
+  /* Skills Grid - Single column on mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+  }
+
+  .tool-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tool-name {
+    font-size: 12px;
+  }
+}
