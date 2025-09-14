@@ -111,6 +111,17 @@ nav a:not(:last-child)::after {
   font-weight: 300;
 }
 
+/* Active page indicator for Home */
+nav a[href="index.html"]::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+}
+
 /* Home Content Container */
 .home-content {
   flex: 1;

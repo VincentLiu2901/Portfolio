@@ -269,7 +269,33 @@ nav a[href="about.html"]::before {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  nav {
+    gap: 30px;
+  }
+  
+  nav a {
+    font-size: 16px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -18px;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    gap: 30px;
+  }
+  
+  nav a {
+    font-size: 18px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -18px;
+  }
+
   .intro-section, .skills-section, .tools-section {
     padding: 40px 20px;
   }
@@ -284,18 +310,6 @@ nav a[href="about.html"]::before {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-  }
-
-  nav {
-    gap: 20px;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
-
-  nav a:not(:last-child)::after {
-    right: -12px;
   }
 
   .intro-box h1 {
@@ -314,6 +328,63 @@ nav a[href="about.html"]::before {
   .tool-icon img {
     width: 45px;
     height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .logo {
+    position: static;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  nav {
+    gap: 25px;
+  }
+  
+  nav a {
+    font-size: 16px;
+  }
+  
+  nav a:not(:last-child)::after {
+    right: -15px;
+    font-size: 14px;
+  }
+
+  .intro-section, .skills-section, .tools-section {
+    padding: 30px 15px;
+  }
+
+  .tools-box {
+    padding: 25px;
+  }
+
+  .skill-item {
+    padding: 20px;
+  }
+
+  /* Skills Grid - Single column on mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+  }
+
+  .tool-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tool-name {
+    font-size: 12px;
   }
 }
 
@@ -362,13 +433,6 @@ nav a[href="about.html"]::before {
 
   .skill-item {
     padding: 20px;
-  }
-
-  /* Skills Grid - Single column on mobile */
-  .skills-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 15px;
   }
 
   .tool-icon img {

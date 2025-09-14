@@ -91,29 +91,53 @@ nav a:not(:last-child)::after {
   margin: 0;
 }
 
-/* Project Image Placeholder */
+/* Updated Project Images - Horizontal Layout */
+.project-images {
+  margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .project-image {
-  background: #f8f9fa;
-  border: 2px solid #e0e0e0;
+  background: transparent;
+  border: none;
   border-radius: 15px;
-  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 250px;
 }
 
+.project-image img {
+  
+  max-width: 100%;
+  width: 400px; /* Reduced size to fit two horizontally */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove image titles/captions */
+.image-title {
+  display: none;
+}
+
+/* Project Image Placeholder (for when no images are present) */
 .image-placeholder {
   font-size: 120px;
   color: #ccc;
   font-weight: 300;
 }
 
-/* Project Details */
+/* Project Details - Sidebar can compress main content */
 .project-details {
   display: grid;
-  grid-template-columns: 1fr 200px;
-  gap: 40px;
+  grid-template-columns: 1fr 250px; /* Increased sidebar width slightly */
+  gap: 30px;
   margin-bottom: 40px;
 }
 
@@ -122,6 +146,7 @@ nav a:not(:last-child)::after {
   border: 2px solid #e0e0e0;
   border-radius: 15px;
   padding: 30px;
+  min-width: 0; /* Allow compression */
 }
 
 .project-text h3 {
@@ -139,8 +164,7 @@ nav a:not(:last-child)::after {
 }
 
 .project-sidebar {
-  background: #f8f9fa;
-  border: 2px solid #e0e0e0;
+  
   border-radius: 15px;
   padding: 20px;
   height: fit-content;
@@ -148,7 +172,7 @@ nav a:not(:last-child)::after {
 
 .sidebar-placeholder {
   font-size: 60px;
-  color: #ccc;
+  
   text-align: center;
   margin: 20px 0;
 }
@@ -185,6 +209,16 @@ nav a:not(:last-child)::after {
 
   .project-description, .project-text {
     padding: 25px;
+  }
+
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-width: 300px;
   }
 
   nav {
@@ -253,8 +287,14 @@ nav a:not(:last-child)::after {
     padding: 20px;
   }
 
-  .project-image {
-    height: 300px;
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-width: 280px;
   }
 
   .image-placeholder {
