@@ -147,6 +147,16 @@ nav a:not(:last-child)::after {
   border-radius: 15px;
   padding: 30px;
   min-width: 0; /* Allow compression */
+  
+}
+
+.project-text2 {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  min-width: 0;
+  
 }
 
 .project-text h3 {
@@ -168,6 +178,15 @@ nav a:not(:last-child)::after {
   border-radius: 15px;
   padding: 20px;
   height: fit-content;
+}
+
+.project-sidebar2 img{
+  
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  
 }
 
 .sidebar-placeholder {
