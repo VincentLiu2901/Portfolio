@@ -171,6 +171,11 @@ nav a[href="project.html"]::before {
   font-weight: 300;
 }
 
+.project-placeholder img {
+  height: auto;
+  width: 330px;
+}
+
 /* Project Info */
 .project-info {
   padding: 25px;

@@ -159,6 +159,15 @@ nav a:not(:last-child)::after {
   
 }
 
+.project-text3 {
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 30px;
+  width:950px ;
+  
+}
+
 .project-text h3 {
   font-size: 24px;
   font-weight: 600;
