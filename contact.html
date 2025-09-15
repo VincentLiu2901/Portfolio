@@ -7,6 +7,135 @@
   <link rel="stylesheet" href="css/contact.css">
   <script src=js/script.js> </script>
   <link rel="icon" type="image/png" href="pictures/Logo_Black.png">
+  <style>
+    /* Contact Box Styles */
+    .contact-box {
+      background: white;
+      color: #333;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 60px auto;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-box h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 5px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666;
+      margin: 5px 0;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.4;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .linkedin-btn {
+      background: #0077b5;
+      color: white;
+    }
+
+    .linkedin-btn:hover {
+      background: #005885;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 119, 181, 0.3);
+    }
+
+    .email-btn {
+      background: #333;
+      color: white;
+    }
+
+    .email-btn:hover {
+      background: #555;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(51, 51, 51, 0.3);
+    }
+
+    /* Responsive adjustments for contact box */
+    @media (max-width: 768px) {
+      .contact-box {
+        margin: 40px 20px;
+        padding: 30px;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-box {
+        padding: 25px;
+      }
+
+      .contact-box h2 {
+        font-size: 24px;
+      }
+
+      .contact-info h3 {
+        font-size: 18px;
+      }
+
+      .contact-info p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body class="page">
   <!-- Page Transition Overlay -->
@@ -24,8 +153,31 @@
     </nav>
   </header>
 
-  
+  <main class="page-content">
+    <div class="contact-box">
+      <h2>Get In Touch</h2>
+      
+      <div class="contact-info">
+        <h3>Southern Alberta Institute of Technology</h3>
+        <p>Polytechnic in Calgary, Alberta</p>
+        <p><strong>Interactive Design - User Experience Major</strong></p>
+      </div>
+
+      <div class="contact-buttons">
+        
+        
+        <a href="mailto:vincentliu0426@outlook.com" class="contact-btn email-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h1.82L12 11.64l8.545-7.819h1.819c.904 0 1.636.732 1.636 1.636z"/>
+          </svg>
+          Email Me
+        </a>
+      </div>
+    </div>
+  </main>
 
   <footer class="footer">
     <p>© 2025 Vincent Liu</p>
   </footer>
+</body>
+</html>

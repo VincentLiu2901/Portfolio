@@ -106,8 +106,8 @@ nav a:not(:last-child)::after {
 
 .logo-item {
   flex: 1;
-  min-width: 400px;  /* Increased from 250px */
-  max-width: 600px;  /* Increased from 400px */
+  min-width: 400px; 
+  max-width: 600px; 
   display: flex;
   justify-content: center;
 }
@@ -123,8 +123,8 @@ nav a:not(:last-child)::after {
 }
 
 .logo-showcase img {
-  max-width: 120%;     /* Increased from 100% - allows images to be larger */
-  width: 120%;         /* Increased from 100% */
+  max-width: 120%;   
+  width: 120%;        
   height: auto;
   border-radius: 10px;
 }
@@ -135,7 +135,7 @@ nav a:not(:last-child)::after {
 }
 
 .logo-showcase1 img {
-  height: 300px;      /* Increased from 200px */
+  height: 300px;      
   width: auto;
 }
 
@@ -147,7 +147,7 @@ nav a:not(:last-child)::after {
 }
 
 .logo-showcase2 img {
-  width: min(150%, 80vw);     /* Uses viewport width with a max of 150% */
+  width: min(150%, 80vw);   
   max-width: none;
   height: auto;
 }
@@ -392,12 +392,12 @@ nav a:not(:last-child)::after {
   }
 
   .logo-item {
-    max-width: 500px;   /* Increased from 350px */
-    min-width: 300px;   /* Increased from default */
+    max-width: 500px;  
+    min-width: 300px;   
   }
 
   .logo-showcase img {
-    max-width: 110%;    /* Slightly smaller increase on mobile */
+    max-width: 110%;   
     width: 110%;
   }
 
@@ -443,7 +443,7 @@ nav a:not(:last-child)::after {
 
 @media (max-width: 576px) {
   .logo-showcase2 img {
-    width: min(110%, 90vw);   /* Larger on very small screens for readability */
+    width: min(110%, 90vw);  
   }
 }
 
@@ -504,8 +504,8 @@ nav a:not(:last-child)::after {
   }
 
   .logo-showcase img {
-    width: min(95%, 80vw);       /* Responsive sizing for mobile */
-    max-width: 350px;            /* Set a reasonable maximum */
+    width: min(95%, 80vw);      
+    max-width: 350px;            
   }
 
   .logo-showcase2 {
@@ -515,8 +515,8 @@ nav a:not(:last-child)::after {
   }
 
   .logo-showcase2 img {
-    width: min(100%, 85vw);   /* More conservative on mobile */
-    max-width: 400px;         /* Set a reasonable maximum */
+    width: min(100%, 85vw);   
+    max-width: 400px;      
   }
 
   .color-swatches {

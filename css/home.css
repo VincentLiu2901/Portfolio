@@ -160,7 +160,7 @@ nav a[href="index.html"]::before {
 }
 
 .intro h2:nth-of-type(2) {
-  white-space: nowrap; /* Prevents "Vincent Liu" from breaking */
+  white-space: nowrap; 
 }
 
 .intro h1 {
@@ -225,13 +225,13 @@ nav a[href="index.html"]::before {
 /* Photo - Made Bigger */
 .photo {
   flex-shrink: 0;
-  margin-left: -80px; /* Moves photo slightly left */
-  margin-top: -60px; /* Moves photo slightly up */
+  margin-left: -80px; 
+  margin-top: -60px; 
   z-index: 15;
 }
 
 .photo img {
-  width: 500px; /* Increased from 400px to 500px */
+  width: 500px; 
   height: auto;
   display: block;
   border-radius: 10px;
@@ -252,7 +252,7 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 1200px) {
   .content-wrapper {
     gap: 40px;
@@ -263,7 +263,7 @@ footer p {
   }
   
   .photo img {
-    width: 450px; /* Increased from 350px to 450px */
+    width: 450px;
   }
   
   .intro h2 {
@@ -297,8 +297,8 @@ footer p {
   }
   
   .photo img {
-    width: 400px; /* Increased from 300px to 400px */
-    opacity: 0.3; /* Makes photo appear faded behind text */
+    width: 400px; 
+    opacity: 0.3; 
     filter: blur(1px);
   }
   
@@ -365,14 +365,14 @@ footer p {
   }
   
   .photo img {
-    width: 350px; /* Increased from 250px to 350px */
+    width: 350px; 
     opacity: 0.25;
   }
 }
 
 @media (max-width: 480px) {
   header {
-    padding: 30px 20px; /* Increased from 15px to 30px */
+    padding: 30px 20px; 
     justify-content: center;
   }
   
@@ -413,7 +413,7 @@ footer p {
   }
   
   .photo img {
-    width: 320px; /* Increased from 260px to 320px */
+    width: 320px; 
     opacity: 0.2;
   }
 }
