@@ -118,7 +118,7 @@ nav a:not(:last-child)::after {
   width: 400px; /* Reduced size to fit two horizontally */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* Remove image titles/captions */
@@ -129,7 +129,7 @@ nav a:not(:last-child)::after {
 /* Project Image Placeholder (for when no images are present) */
 .image-placeholder {
   font-size: 120px;
-  color: #ccc;
+  
   font-weight: 300;
 }
 
