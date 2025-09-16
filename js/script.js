@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-  
+    // PARALLAX EFFECT REMOVED - This was causing the image to move on scroll
+    /*
     function addParallaxEffect() {
         let ticking = false;
         function updateParallax() {
@@ -121,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         window.addEventListener('scroll', requestTick);
     }
+    */
 
   
     function initializeAnimations() {
@@ -131,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (document.querySelector('.home')) {
             addTypingAnimation();
-            addParallaxEffect();
+            
         }
 
         pageEntranceAnimation();
